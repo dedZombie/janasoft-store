@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <a>
+        <span (click)="toggleSidenav.emit()">TOGGLE</span>
+        Home
+    </a>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill-space"></span>
+
+    <ul class="navigation-menu-container">
+        <li class="navigation-menu-item">
+            <a class="navigation-menu-link">Shopping cart</a>
+        </li>
+        <li class="navigation-menu-item">
+            <a class="navigation-menu-link">Login</a>
+        </li>
+    </ul>
+</mat-toolbar>

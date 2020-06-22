@@ -1,0 +1,18 @@
+.fill-space {
+    flex: 1 1 auto;
+}
+
+.navigation-menu-container {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    .navigation-menu-item {
+        padding: .5rem .75rem;
+
+        .navigation-menu-link {
+            cursor: pointer;
+        }
+    }
+}
