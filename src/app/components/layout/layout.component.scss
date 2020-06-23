@@ -7,3 +7,29 @@
 .sidenav-drawer {
     width: $sidenavWidth;
 }
+
+.sidenav-menu-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .sidenav-menu-item {
+        padding: 1rem;
+            
+        &:hover {
+            background-color: darken($color: $backgroundColor, $amount: 5);
+        }
+
+        .sidenav-menu-link {
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+
+            .mat-icon {
+                margin-right: .5rem;
+            }
+        }
+    }
+}

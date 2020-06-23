@@ -4,13 +4,15 @@
         class="sidenav-toggle"
         [ngClass]="{ 'sidenav-open' : elementRef.opened }"
         (click)="toggleSidenav.emit()"
+        matTooltip="Toggle sidenav menu"
         aria-hidden="false"
         aria-label="toggle sidenav">
         vertical_split
     </mat-icon>
 
     <a class="cta-link">
-        <mat-icon 
+        <mat-icon
+            class="jss-mr-sm-05"
             aria-hidden="false"
             aria-label="home icon">home</mat-icon>
         Home
@@ -21,10 +23,16 @@
 
     <ul class="navigation-menu-container">
         <li class="navigation-menu-item">
-            <a class="navigation-menu-link">Shopping cart</a>
+            <a class="navigation-menu-link">
+                <mat-icon matBadge="1" matBadgePosition="above before" matBadgeColor="accent">shopping_cart</mat-icon>
+                0.00 RSD
+            </a>
         </li>
         <li class="navigation-menu-item">
-            <a class="navigation-menu-link">Login</a>
+            <a class="navigation-menu-link">
+                <mat-icon class="jss-mr-sm-05">login</mat-icon>
+                Login
+            </a>
         </li>
     </ul>
 </mat-toolbar>

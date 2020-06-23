@@ -4,6 +4,7 @@
     cursor: pointer;
     outline: none;
     border: none;
+    margin-right: 1rem;
     transition-duration: 400ms;
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
 
@@ -15,10 +16,7 @@
 .cta-link {
     display: flex;
     align-items: center;
-
-    .mat-icon {
-        margin-right: .5rem;
-    }
+    font-size: .75rem;
 }
 
 .mat-toolbar-row, .mat-toolbar-single-row {
@@ -40,6 +38,9 @@
 
         .navigation-menu-link {
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: .75rem;
         }
     }
 }
