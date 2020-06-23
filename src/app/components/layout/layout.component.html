@@ -1,7 +1,19 @@
-<app-navigation (toggleSidenav)="sidenavDrawer.toggle()"></app-navigation>
+<app-navigation (toggleSidenav)="sidenavDrawer.toggle()" [elementRef]="sidenavDrawer"></app-navigation>
 
 <mat-drawer-container class="main-content">
-    <mat-drawer #sidenavDrawer mode="side" opened>Drawer content</mat-drawer>
+    <mat-drawer #sidenavDrawer mode="side" class="sidenav-drawer">
+        <ul class="">
+            <li class="">
+                <a class="">Products</a>
+            </li>
+            <li class="">
+                <a class="">About</a>
+            </li>
+            <li class="">
+                <a class="">Contact</a>
+            </li>
+        </ul>
+    </mat-drawer>
     <mat-drawer-content>
         <app-home></app-home>
     </mat-drawer-content>

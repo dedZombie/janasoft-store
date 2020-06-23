@@ -1,3 +1,9 @@
+@import "variables";
+
 .main-content {
     height: calc(100% - 64px);
+}
+
+.sidenav-drawer {
+    width: $sidenavWidth;
 }

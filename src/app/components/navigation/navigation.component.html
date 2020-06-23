@@ -1,6 +1,18 @@
 <mat-toolbar color="primary">
-    <a>
-        <span (click)="toggleSidenav.emit()">TOGGLE</span>
+
+    <mat-icon
+        class="sidenav-toggle"
+        [ngClass]="{ 'sidenav-open' : elementRef.opened }"
+        (click)="toggleSidenav.emit()"
+        aria-hidden="false"
+        aria-label="toggle sidenav">
+        vertical_split
+    </mat-icon>
+
+    <a class="cta-link">
+        <mat-icon 
+            aria-hidden="false"
+            aria-label="home icon">home</mat-icon>
         Home
     </a>
 

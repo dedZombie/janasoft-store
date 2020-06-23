@@ -1,5 +1,26 @@
 @import "variables";
 
+.sidenav-toggle {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &.sidenav-open {
+        width: $sidenavWidth;
+    }
+}
+
+.cta-link {
+    display: flex;
+    align-items: center;
+
+    .mat-icon {
+        margin-right: .5rem;
+    }
+}
+
 .mat-toolbar-row, .mat-toolbar-single-row {
     height: $navigationHeight;
 }

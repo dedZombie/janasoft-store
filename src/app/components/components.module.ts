@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { JSMaterialModule } from '../js-material.module';
 
 import { HomeComponent } from './home/home.component';
@@ -7,7 +8,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
-    imports: [ 
+    imports: [
+        CommonModule,
         JSMaterialModule 
     ],
     declarations: [

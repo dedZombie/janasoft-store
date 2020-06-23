@@ -1,13 +1,19 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
     selector: 'app-navigation',
     templateUrl: './navigation.component.html',
     styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent {
+export class NavigationComponent implements OnInit {
 
-    @Output() toggleSidenav = new EventEmitter;
+    @Output() toggleSidenav = new EventEmitter();
+    @Input() elementRef: MatSidenav;
 
     constructor() {}
+
+    ngOnInit() {
+        console.log(this.elementRef)
+    }
 }
