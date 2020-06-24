@@ -1,7 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/base.scss";
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 a { text-decoration: none; }
 
-@import "./styles/base.scss";
+.static-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $backgroundColor;
+
+    .mat-card {
+        width: 50%;
+        margin-top: -25%;
+        box-shadow: none;
+        border: 0;
+        background-color: $backgroundColor;
+
+        h1 {
+            font-size: 2.7rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .mat-card-content {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+

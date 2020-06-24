@@ -1,1 +1,9 @@
-<h1>about component works!</h1>
+<div class="static-content">
+    <mat-card>
+        <h1>{{ aboutTitle }}</h1>
+        <mat-card-content *ngFor="let description of aboutDescription">
+            <p>{{ description }}</p>
+        </mat-card-content>
+        <button mat-raised-button color="primary">Check out our awesome products</button>
+    </mat-card>
+</div>

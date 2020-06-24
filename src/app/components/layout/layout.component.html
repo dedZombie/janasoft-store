@@ -19,7 +19,7 @@
             </li>
             <li class="sidenav-menu-item">
                 <a class="sidenav-menu-link"
-                    routerLink="/contact">
+                    [routerLink]="['/contact']">
                     <mat-icon>perm_phone_msg</mat-icon>
                     Contact
                 </a>
@@ -27,7 +27,6 @@
         </ul>
     </mat-drawer>
     <mat-drawer-content>
-        <!-- <app-home></app-home> -->
         <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>
