@@ -13,7 +13,5 @@ export class NavigationComponent implements OnInit {
 
     constructor() {}
 
-    ngOnInit() {
-        console.log(this.elementRef)
-    }
+    ngOnInit() {}
 }

@@ -1,12 +1,22 @@
-<form (ngSubmit)="$event.preventDefault()">
-    <div>
-        <label>Email</label>
-        <input matInput>
-    </div>
-    <div>
-        <label>Password</label>
-        <input matInput>
-    </div>
+<mat-card class="form-container">
+    <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="userForm" (ngSubmit)="$event.preventDefault()" class="login-form">
 
-    <button (click)="login()">Login</button>
-</form>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password">
+        </mat-form-field>
+
+        <button mat-fab (click)="onLogin()" color="primary">
+            <mat-icon>login</mat-icon>
+        </button>
+    </form>
+</mat-card>
+
