@@ -2,6 +2,6 @@
     <mat-card>
         <h1>{{ homeTitle }}</h1>
         <mat-card-content>{{ homeDescription }}</mat-card-content>
-        <button mat-raised-button color="primary">Check out our awesome products</button>
+        <button [routerLink]="['/products']" mat-raised-button color="primary">Check out our awesome products</button>
     </mat-card>
 </div>

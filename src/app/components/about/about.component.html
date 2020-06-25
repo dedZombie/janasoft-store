@@ -4,6 +4,6 @@
         <mat-card-content *ngFor="let description of aboutDescription">
             <p>{{ description }}</p>
         </mat-card-content>
-        <button mat-raised-button color="primary">Check out our awesome products</button>
+        <button [routerLink]="['/products']" mat-raised-button color="primary">Check out our awesome products</button>
     </mat-card>
 </div>
