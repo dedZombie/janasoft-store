@@ -11,6 +11,7 @@ import { ComponentsModule } from './components/components.module';
 import { AuthService } from './auth/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
+import { JWTService } from './shared/services/jwt.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { AuthModule } from './auth/auth.module';
     AuthModule,
     ComponentsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, JWTService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

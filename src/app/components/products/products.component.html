@@ -1,1 +1,18 @@
-<h1>products component works!</h1>
+<div class="products-container">
+    <div class="products-row">
+        <mat-card *ngFor="let product of products">
+            <img mat-card-image src="{{ product && product.imageUrls.length > 0 ? product.imageUrls[0] : noImageUrl }}">
+            <mat-card-content>
+                <p>{{ product.name }}</p>
+                <p>Code: {{ product.code }}</p>
+                <p>{{ product.price }} RSD</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>
+                    <mat-icon>shopping_cart</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    
+</div>

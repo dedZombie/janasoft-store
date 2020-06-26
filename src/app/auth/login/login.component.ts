@@ -22,9 +22,6 @@ export class LoginComponent {
     onLogin() {
         const user: User = this.userForm.value;
 
-        this.authService.loginUser(user)
-            .subscribe(
-                (token) => console.log('Token: ', token)
-            );
+        this.authService.loginUser(user).subscribe();
     }
 }
