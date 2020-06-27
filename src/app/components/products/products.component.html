@@ -1,18 +1,19 @@
 <div class="products-container">
     <div class="products-row">
-        <mat-card *ngFor="let product of products">
-            <img mat-card-image src="{{ product && product.imageUrls.length > 0 ? product.imageUrls[0] : noImageUrl }}">
-            <mat-card-content>
-                <p>{{ product.name }}</p>
-                <p>Code: {{ product.code }}</p>
-                <p>{{ product.price }} RSD</p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>
-                    <mat-icon>shopping_cart</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
+        <a *ngFor="let product of products" [routerLink]="['/products', product.id]">
+            <mat-card>
+                <img mat-card-image src="{{ product && product.imageUrls.length > 0 ? product.imageUrls[0] : noImageUrl }}">
+                <mat-card-content>
+                    <p>{{ product.name }}</p>
+                    <p>Code: {{ product.code }}</p>
+                    <p>{{ product.price }} RSD</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>
+                        <mat-icon>shopping_cart</mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </a>
     </div>
-    
 </div>

@@ -9,6 +9,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './products/product/product.component';
 import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { LoaderComponent } from './loader/loader.component';
         AboutComponent,
         ContactComponent,
         ProductsComponent,
+        ProductComponent,
         LoaderComponent
     ],
     exports: [
@@ -33,6 +35,7 @@ import { LoaderComponent } from './loader/loader.component';
         AboutComponent,
         ContactComponent,
         ProductsComponent,
+        ProductComponent,
         LoaderComponent
     ]
 })

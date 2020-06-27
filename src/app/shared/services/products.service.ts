@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
-import { Products } from '../models/products.model';
 
 @Injectable({
     providedIn: 'root'
@@ -20,5 +19,9 @@ export class ProductsService {
                 limit: limit
             }
         });
+    }
+
+    getProduct(id: string): Observable<any> {
+        return this.http.get(`${this.base_url}/products/${id}`);
     }
 }
