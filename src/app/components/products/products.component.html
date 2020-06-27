@@ -16,4 +16,10 @@
             </mat-card>
         </a>
     </div>
+
+
+    <mat-paginator [length]="products.length"
+            [pageSize]="10"
+            [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
 </div>

@@ -10,9 +10,16 @@
         <p>Code: {{ product.code }}</p>
         <p>Created at: {{ product.createdAt | date: 'dd.MM.yyyy' }}</p>
 
-        <div class="product-image-container">
+        <div *ngIf="product.imageUrls.length > 0; else noImageBlock" class="product-image-container">
             <img *ngFor="let image of product.imageUrls" src="{{ image }}" class="product-image">
         </div>
+        
+        <ng-template #noImageBlock>
+            <div class="product-image-container">
+                <img src="../../../../assets/images/no_image.jpg" class="product-image">
+            </div>
+        </ng-template>
+        
     </mat-card-content>
 
     <mat-card-actions>
