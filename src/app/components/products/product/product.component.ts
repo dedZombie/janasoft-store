@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from 'src/app/shared/services/products.service';
 import { Subscription } from 'rxjs';
 import { Product } from 'src/app/shared/models/product.model';
+import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.service';
+import { map } from 'rxjs/operators';
 
 @Component({
     selector: 'app-product',
@@ -14,11 +16,20 @@ export class ProductComponent implements OnInit, OnDestroy {
 
     id: string;
     private subscription: Subscription;
-    product: Product;
+    shoppingCart: Product[] = [];
+    product: Product = {
+        name: '',
+        code: '',
+        imageUrls: [],
+        price: 0,
+        id: '',
+        createdAt: ''
+    };
 
     constructor(
         private productsService: ProductsService,
-        private route: ActivatedRoute
+        private route: ActivatedRoute,
+        private shoppingCartService: ShoppingCartService
     ) {}
 
     ngOnInit() {
@@ -41,6 +52,10 @@ export class ProductComponent implements OnInit, OnDestroy {
                 console.log(this.product)
             }
         );
+    }
+
+    addToCart(product: Product) {
+        this.shoppingCartService.addToShoppingList(product)
     }
 
     ngOnDestroy() {

@@ -12,6 +12,7 @@ import { AuthService } from './auth/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 import { JWTService } from './shared/services/jwt.service';
+import { ShoppingCartService } from './shared/services/shopping-cart.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { JWTService } from './shared/services/jwt.service';
     AuthModule,
     ComponentsModule
   ],
-  providers: [AuthService, JWTService],
+  providers: [AuthService, JWTService, ShoppingCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
