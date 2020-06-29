@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Product } from 'src/app/shared/models/product.model';
+import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.service';
 
 @Component({
     selector: 'app-shopping-cart',
@@ -7,7 +8,9 @@ import { Product } from 'src/app/shared/models/product.model';
     styleUrls: ['./shopping-cart.component.scss']
 })
 export class ShoppingCartComponent implements OnInit {
-    constructor() {}
+    constructor(
+        private shoppingCartService: ShoppingCartService
+    ) {}
 
     shoppingCart: Product[] = [];
     columns = ['product', 'name', 'price', 'total', 'actions'];
@@ -28,5 +31,18 @@ export class ShoppingCartComponent implements OnInit {
         return this.shoppingCart.reduce((p,c) => {
             return p + c.price
         }, 0)
+    }
+
+    get userId() {
+        return localStorage.getItem('userId');
+    }
+
+    submitOrder() {
+        this.shoppingCartService.submitOrder(this.userId, this.shoppingCart)
+            .subscribe(
+                (res) => {
+                    console.log(res);
+                }
+            )
     }
 }
