@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Product } from '../models/product.model';
-import { Subject, BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -15,5 +15,6 @@ export class ShoppingCartService {
     addToShoppingList(shoppingList: Product) {
         this.dataStore.shoppingCartItems.push(shoppingList);
         this.shoppingCartSub.next(Object.assign({}, this.dataStore).shoppingCartItems);
+        localStorage.setItem('shoppingList: ', JSON.stringify(this.dataStore.shoppingCartItems));
     }
 }

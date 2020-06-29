@@ -1,0 +1,17 @@
+.orders-table {
+    width: 100%;
+    td {
+        &.mat-column-product {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

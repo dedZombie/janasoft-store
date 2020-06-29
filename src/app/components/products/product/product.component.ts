@@ -55,7 +55,7 @@ export class ProductComponent implements OnInit, OnDestroy {
     }
 
     addToCart(product: Product) {
-        this.shoppingCartService.addToShoppingList(product)
+        this.shoppingCartService.addToShoppingList(product);
     }
 
     ngOnDestroy() {

@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './products/product/product.component';
 import { LoaderComponent } from './loader/loader.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
     imports: [
@@ -26,6 +27,7 @@ import { LoaderComponent } from './loader/loader.component';
         ContactComponent,
         ProductsComponent,
         ProductComponent,
+        ShoppingCartComponent,
         LoaderComponent
     ],
     exports: [
@@ -36,6 +38,7 @@ import { LoaderComponent } from './loader/loader.component';
         ContactComponent,
         ProductsComponent,
         ProductComponent,
+        ShoppingCartComponent,
         LoaderComponent
     ]
 })

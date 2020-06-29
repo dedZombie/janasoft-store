@@ -24,9 +24,9 @@
 
     <ul class="navigation-menu-container">
         <li class="navigation-menu-item">
-            <a class="navigation-menu-link">
+            <a class="navigation-menu-link" [routerLink]="['/shopping-cart']">
                 <mat-icon matBadge="{{ numberOfItemsInCart }}" matBadgePosition="above before" matBadgeColor="accent">shopping_cart</mat-icon>
-                0.00 RSD
+                {{ totalPrice }} RSD
             </a>
         </li>
         <li class="navigation-menu-item">

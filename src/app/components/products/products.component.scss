@@ -1,40 +1,22 @@
 .products-container {
     width: 100%;
-    // padding-right: 15px;
-    // padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-
-    // @media (min-width: 576px) {
-    //     max-width: 540px;
-    // }
-
-    // @media (min-width: 768px) {
-    //     max-width: 720px;
-    // }
-
-    // @media (min-width: 992px) {
-    //     max-width: 960px;
-    // }
-
-    // @media (min-width: 1200px) {
-    //     max-width: 1140px;
-    // }
 
     .products-row {
         display: flex;
         width: 100%;
         flex-wrap: wrap;
-        // margin-left: -15px;
-        // margin-right: -15px;
+        justify-content: space-evenly;
     }
 
-    a {
+    .mat-card {
         flex: 0 0 100%;
         max-width: 100%;
         padding-left: 15px;
         padding-right: 15px;
         margin-bottom: 1rem;
+        padding: 0;
 
         @media (min-width: 576px) {
             flex: 0 0 75%;
@@ -56,29 +38,42 @@
             max-width: 23%;
         }
 
-        .mat-card {
-            padding: 0;
+        a {
+            text-decoration: none;
+            color: initial;
+        }
+        
+
+        .product-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            padding: 1rem;
 
             img {
                 display: block;
-                max-width: 80%;
-                margin: 0 auto;
+                max-width: 100%;
+                height: auto;
+                margin: 0;
             }
-    
-            .mat-card-content {
-                p {
-                    padding: .5rem .75rem;
-    
-                    &:first-child {
-                        text-align: center;
-                    }
+        }
+        
+
+        .mat-card-content {
+            p {
+                padding: .5rem .75rem;
+
+                &:first-child {
+                    text-align: center;
                 }
             }
-    
-            .mat-card-actions {
-                display: flex;
-                justify-content: center;
-            }
+        }
+
+        .mat-card-actions {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
         }
     }
 }

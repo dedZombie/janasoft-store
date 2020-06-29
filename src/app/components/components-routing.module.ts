@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './products/product/product.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'products', component: ProductsComponent },
     { path: 'products/:id', component: ProductComponent },
+    { path: 'shopping-cart', component: ShoppingCartComponent }
 ];
 
 @NgModule({
